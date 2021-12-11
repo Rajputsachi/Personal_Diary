@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <div class="box" id="heading">
+        <h1 ><%=Tittle%></h1>
+      </div>
+      <div class="box" id="item">
+             <%for(var i=0;i<newlistitem.length;i++)
+              {if(i!=0){%>
+                <hr />
+              <%}%>
+                <p class="addtag">
+                <input type="checkbox" id="cbox" value="second_checkbox"> <label for="cbox2">
+                  <%=newlistitem[i]%>
+
+                </label><br>
+
+
+              </p>
+              <%}%>
+          </ul>
+          <form  class="box"id="form" action="/" method="post">
+             <input type="text" id="input" name="newitem" placeholder="newitems" autocomplete="off">
+             <button type="submit" class="last-button" name="list" value=<%=Tittle%>style="float: right;">+</button>
+           </form>
+         </div>
+
+</body>
+</html>
